@@ -76,4 +76,8 @@ extern "C" LLVM_EXTERNAL_VISIBILITY void LLVMInitializeTsatsulTargetMC() {
 
   // Register the MCInstPrinter
   TargetRegistry::RegisterMCInstPrinter(TheTsatsulTarget, createTsatsulMCInstPrinter);
+  // Register the MC Code Emitter.
+  TargetRegistry::RegisterMCCodeEmitter(TheTsatsulTarget, createTsatsulMCCodeEmitter);
+  // Register the asm backend.
+  TargetRegistry::RegisterMCAsmBackend(TheTsatsulTarget, createTsatsulAsmBackend);
 }

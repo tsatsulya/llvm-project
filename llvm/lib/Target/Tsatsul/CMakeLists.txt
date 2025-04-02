@@ -9,6 +9,7 @@ tablegen(LLVM TsatsulGenMCPseudoLowering.inc -gen-pseudo-lowering)
 tablegen(LLVM TsatsulGenDAGISel.inc -gen-dag-isel)
 tablegen(LLVM TsatsulGenCallingConv.inc -gen-callingconv)
 tablegen(LLVM TsatsulGenAsmWriter.inc -gen-asm-writer)
+tablegen(LLVM TsatsulGenMCCodeEmitter.inc -gen-emitter)
 
 add_public_tablegen_target(TsatsulCommonTableGen)
 
